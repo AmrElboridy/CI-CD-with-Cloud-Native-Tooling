@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-        {{ .Values.configmap.data }}
+        app: nginx
+        tag: alpine
   name: nginx-alpine
   namespace: {{ .Values.namespace.name }}
 spec:
