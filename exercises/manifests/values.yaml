@@ -8,10 +8,13 @@ image:
 Service:
   type: ClusterIP
   port: 8111
+
 replicaCount: 3
+
 resources: 
-  limits:
+  requests:
      cpu: 50m
      memory: 256Mi
+
 configmap:
-  version: alpine
+  data: "version: alpine"

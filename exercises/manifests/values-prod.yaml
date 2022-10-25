@@ -4,11 +4,14 @@ replicaCount: 2
 image:
   repository: pixelpotato/nginx:alpine 
   tag: 1.17.0 
+  pullPolicy: IfNotPresent
+
 resources: 
-  limits:
+  requests:
      cpu: 70m
      memory: 256Mi
-configmap:
-  version: "1.17.0"
 Service:
   port: 80
+  type: ClusterIp
+configmap:
+  data: "version: 1.17.0"
