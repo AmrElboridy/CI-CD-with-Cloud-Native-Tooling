@@ -1,0 +1,12 @@
+namespace:
+  name: staging
+replicaCount: 1
+image:
+  repository: pixelpotato/nginx:alpine 
+  tag: 1.18.0 
+resources: 
+  limits:
+     cpu: 50m
+     memory: 128Mi
+configmap:
+  version: "1.18.0"

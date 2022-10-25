@@ -1,0 +1,14 @@
+namespace:
+  name: prod
+replicaCount: 2
+image:
+  repository: pixelpotato/nginx:alpine 
+  tag: 1.17.0 
+resources: 
+  limits:
+     cpu: 70m
+     memory: 256Mi
+configmap:
+  version: "1.17.0"
+Service:
+  port: 80

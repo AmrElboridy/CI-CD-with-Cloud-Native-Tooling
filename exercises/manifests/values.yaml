@@ -1,0 +1,18 @@
+namespace:
+  name: demo
+ 
+image:
+  repository: pixelpotato/nginx:alpine 
+  tag: v1.0.0
+  pullPolicy: IfNotPresent
+
+Service:
+  type: ClusterIP
+  port: 8111
+replicaCount: 3
+resources: 
+  limits:
+     cpu: 50m
+     memory: 256Mi
+configmap:
+  version: alpine
